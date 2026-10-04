@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tomas & Ava | Wedding</title>
+
+https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:#faf7f2;
+color:#333;
+overflow-x:hidden;
+}
+
+section{
+padding:80px 10%;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url("hero.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:6rem;
+}
+
+.hero h2{
+font-size:1.4rem;
+font-weight:300;
+margin:10px 0 20px;
+}
+
+.hero p{
+font-size:1.1rem;
+}
+
+.button{
+display:inline-block;
+padding:14px 24px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:50px;
+margin:10px;
+font-weight:bold;
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:30px;
+}
+
+.time-box{
+background:rgba(255,255,255,.2);
+padding:20px;
+border-radius:20px;
+min-width:100px;
+backdrop-filter:blur(5px);
+}
+
+.time-box span{
+display:block;
+font-size:2rem;
+font-weight:bold;
+}
+
+.title{
+text-align:center;
+font-size:3rem;
+font-family:'Great Vibes',cursive;
+margin-bottom:40px;
+color:#a58852;
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.story-grid img{
+width:100%;
+border-radius:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:400px;
+object-fit:cover;
+border-radius:20px;
+}
+
+.details{
+text-align:center;
+background:#f2ece3;
+}
+
+.rsvp{
+background:white;
+text-align:center;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:12px;
+}
+
+form{
+max-width:600px;
+margin:auto;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+background:#b7955d;
+color:white;
+font-size:1rem;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:50px;
+background:#111;
+color:white;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:4rem;
+}
+
+.story-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<audio id="music" loop>
+song.mp3
+</audio>
+
+<section class="hero">
+
+<h1>Tomas & Ava</h1>
+
+<h2>March 17, 2027</h2>
+
+<p>Grand Canyon, Arizona</p>
+
+<div>
+
+<button onclick="document.getElementById('music').play()">
+🎵 Play Our Song
+</button>
+
+#rsvp
+💌 RSVP
+</a>
+
+</div>
+
+<div class="countdown">
+
+<div class="time-box">
+<span id="days">0</span>
+Days
+</div>
+
+<div class="time-box">
+<span id="hours">0</span>
+Hours
+</div>
+
+<div class="time-box">
+<span id="minutes">0</span>
+Minutes
+</div>
+
+<div class="time-box">
+<span id="seconds">0</span>
+Seconds
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Our Story</h2>
+
+<div class="story-grid">
+
+story.jpg
+
+<div>
+
+<p>
+With joyful hearts, Tomas and Ava invite you to celebrate the beginning of their forever together. Every adventure, every laugh, and every special moment has led to this beautiful day.
+</p>
+
+<br>
+
+<p>
+We are honored to share our wedding celebration with our family and friends beneath the beauty of the Grand Canyon.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="details">
+
+<h2 class="title">Wedding Details</h2>
+
+<h3>📅 March 17, 2027</h3>
+
+<br>
+
+<h3>📍 Grand Canyon, Arizona</h3>
+
+<br>
+
+https://maps.google.com/?q=Grand+Canyon+Arizona
+🗺️ Directions
+</a>
+
+</section>
+
+<section id="rsvp" class="rsvp">
+
+<h2 class="title">RSVP</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<select>
+<option>Will You Attend?</option>
+<option>Joyfully Accept</option>
+<option>Regretfully Decline</option>
+</select>
+
+<input type="number" placeholder="Number Attending">
+
+<textarea rows="5" placeholder="Leave a message for Tomas & Ava"></textarea>
+
+<button type="submit">
+Submit RSVP
+</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2 class="title">Our Adventures</h2>
+
+<div class="story-grid">
+
+beach.jpg
+
+<div>
+
+<p>
+From sandy shores to canyon views, our favorite place has always been wherever we're together.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">The Little Moments</h2>
+
+<div class="story-grid">
+
+<div>
+
+<p>
+Life is made up of adventures big and small. From traveling and exploring new places to sharing fun nights together, every memory has brought us closer to forever.
+</p>
+
+</div>
+
+arcade.jpg
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+hero.jpg
+story.jpg
+beach.jpg
+arcade.jpg
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Tomas & Ava ❤️</h2>
+
+<p>
+We can't wait to celebrate with you.
+</p>
+
+</footer>
+
+<script>
+
+const weddingDate =
+new Date("March 17, 2027 16:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+
+const distance = weddingDate - now;
+
+document.getElementById("days").innerHTML =
+Math.floor(distance / (1000*60*60*24));
+
+document.getElementById("hours").innerHTML =
+Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance % (1000*60*60)) / (1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance % (1000*60)) / 1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
