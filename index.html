@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tomas & Ava | Wedding</title>
+<title>Ava & Tomas</title>
 
-https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap
+https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap
 
 <style>
 
@@ -17,97 +17,96 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Poppins,sans-serif;
-background:#faf7f2;
-color:#333;
-overflow-x:hidden;
+font-family:Montserrat,sans-serif;
+background:#faf9f7;
+color:#222;
+line-height:1.7;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.hero img{
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,.25);
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-family:"Cormorant Garamond",serif;
+font-size:5rem;
+font-weight:600;
+}
+
+.hero p{
+font-size:1.2rem;
 }
 
 section{
 padding:80px 10%;
 }
 
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-url("hero.jpg");
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+.section-title{
+font-family:"Cormorant Garamond",serif;
+font-size:3rem;
 text-align:center;
-color:white;
-}
-
-.hero h1{
-font-family:'Great Vibes',cursive;
-font-size:6rem;
-}
-
-.hero h2{
-font-size:1.4rem;
-font-weight:300;
-margin:10px 0 20px;
-}
-
-.hero p{
-font-size:1.1rem;
-}
-
-.button{
-display:inline-block;
-padding:14px 24px;
-background:white;
-color:black;
-text-decoration:none;
-border-radius:50px;
-margin:10px;
-font-weight:bold;
+margin-bottom:40px;
 }
 
 .countdown{
 display:flex;
 justify-content:center;
+gap:30px;
 flex-wrap:wrap;
-gap:20px;
-margin-top:30px;
 }
 
-.time-box{
-background:rgba(255,255,255,.2);
-padding:20px;
-border-radius:20px;
-min-width:100px;
-backdrop-filter:blur(5px);
-}
-
-.time-box span{
-display:block;
-font-size:2rem;
-font-weight:bold;
-}
-
-.title{
+.box{
+background:white;
+padding:30px;
+min-width:150px;
 text-align:center;
-font-size:3rem;
-font-family:'Great Vibes',cursive;
-margin-bottom:40px;
-color:#a58852;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-.story-grid{
+.number{
+font-size:3rem;
+font-weight:600;
+}
+
+.story{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
 align-items:center;
 }
 
-.story-grid img{
-width:100%;
-border-radius:20px;
+.story img{
+border-radius:12px;
 }
 
 .gallery{
@@ -117,20 +116,14 @@ gap:20px;
 }
 
 .gallery img{
-width:100%;
-height:400px;
+height:350px;
 object-fit:cover;
-border-radius:20px;
-}
-
-.details{
-text-align:center;
-background:#f2ece3;
+border-radius:12px;
 }
 
 .rsvp{
-background:white;
-text-align:center;
+max-width:700px;
+margin:auto;
 }
 
 input,
@@ -138,40 +131,35 @@ textarea,
 select{
 width:100%;
 padding:15px;
-margin:10px 0;
-border:1px solid #ddd;
-border-radius:12px;
-}
-
-form{
-max-width:600px;
-margin:auto;
+margin-top:10px;
+margin-bottom:20px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:1rem;
 }
 
 button{
-padding:15px 30px;
-border:none;
-border-radius:50px;
-background:#b7955d;
+background:#222;
 color:white;
-font-size:1rem;
+border:none;
+padding:15px 30px;
+border-radius:10px;
 cursor:pointer;
 }
 
 footer{
 text-align:center;
 padding:50px;
-background:#111;
-color:white;
+background:#f2f0ec;
 }
 
-@media(max-width:768px){
+@media(max-width:800px){
 
 .hero h1{
-font-size:4rem;
+font-size:3rem;
 }
 
-.story-grid{
+.story{
 grid-template-columns:1fr;
 }
 
@@ -181,50 +169,37 @@ grid-template-columns:1fr;
 </head>
 <body>
 
-<audio id="music" loop>
-song.mp3
-</audio>
+<header class="hero">
 
-<section class="hero">
+hero.jpg
 
-<h1>Tomas & Ava</h1>
-
-<h2>March 17, 2027</h2>
-
-<p>Grand Canyon, Arizona</p>
-
-<div>
-
-<button onclick="document.getElementById('music').play()">
-🎵 Play Our Song
-</button>
-
-#rsvp
-💌 RSVP
-</a>
-
+<div class="overlay">
+<h1>Ava & Tomas</h1>
+<p>March 17, 2027</p>
+<p>St. Petersburg, Florida</p>
 </div>
+
+</header>
+
+<section>
+
+<h2 class="section-title">Countdown</h2>
 
 <div class="countdown">
 
-<div class="time-box">
-<span id="days">0</span>
+<div class="box">
+<div id="months" class="number">0</div>
+Months
+</div>
+
+<div class="box">
+<div id="weeks" class="number">0</div>
+Weeks
+</div>
+
+<div class="box">
+<div id="days" class="number">0</div>
 Days
-</div>
-
-<div class="time-box">
-<span id="hours">0</span>
-Hours
-</div>
-
-<div class="time-box">
-<span id="minutes">0</span>
-Minutes
-</div>
-
-<div class="time-box">
-<span id="seconds">0</span>
-Seconds
 </div>
 
 </div>
@@ -233,86 +208,48 @@ Seconds
 
 <section>
 
-<h2 class="title">Our Story</h2>
+<h2 class="section-title">Our Story</h2>
 
-<div class="story-grid">
+<div class="story">
 
 story.jpg
 
 <div>
 
 <p>
-With joyful hearts, Tomas and Ava invite you to celebrate the beginning of their forever together. Every adventure, every laugh, and every special moment has led to this beautiful day.
-</p>
-
-<br>
-
-<p>
-We are honored to share our wedding celebration with our family and friends beneath the beauty of the Grand Canyon.
+Ava and Tomas have built a relationship centered on friendship, trust, and support. Through new experiences, everyday moments, and plenty of memories along the way, they've continued to grow together. They're excited to celebrate this next chapter with their family and friends.
 </p>
 
 </div>
 
 </div>
-
-</section>
-
-<section class="details">
-
-<h2 class="title">Wedding Details</h2>
-
-<h3>📅 March 17, 2027</h3>
-
-<br>
-
-<h3>📍 Grand Canyon, Arizona</h3>
-
-<br>
-
-https://maps.google.com/?q=Grand+Canyon+Arizona
-🗺️ Directions
-</a>
-
-</section>
-
-<section id="rsvp" class="rsvp">
-
-<h2 class="title">RSVP</h2>
-
-<form>
-
-<input type="text" placeholder="Full Name">
-
-<select>
-<option>Will You Attend?</option>
-<option>Joyfully Accept</option>
-<option>Regretfully Decline</option>
-</select>
-
-<input type="number" placeholder="Number Attending">
-
-<textarea rows="5" placeholder="Leave a message for Tomas & Ava"></textarea>
-
-<button type="submit">
-Submit RSVP
-</button>
-
-</form>
 
 </section>
 
 <section>
 
-<h2 class="title">Our Adventures</h2>
+<h2 class="section-title">Wedding Details</h2>
 
-<div class="story-grid">
+<p style="text-align:center;">
+March 17, 2027
+<br><br>
+St. Petersburg, Florida
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Adventures</h2>
+
+<div class="story">
 
 beach.jpg
 
 <div>
 
 <p>
-From sandy shores to canyon views, our favorite place has always been wherever we're together.
+Some of Ava and Tomas's favorite memories come from exploring new places and spending time together. Whether it's a trip somewhere new or a simple day together, those moments have become some of their favorites.
 </p>
 
 </div>
@@ -323,14 +260,14 @@ From sandy shores to canyon views, our favorite place has always been wherever w
 
 <section>
 
-<h2 class="title">The Little Moments</h2>
+<h2 class="section-title">Fun Memories</h2>
 
-<div class="story-grid">
+<div class="story">
 
 <div>
 
 <p>
-Life is made up of adventures big and small. From traveling and exploring new places to sharing fun nights together, every memory has brought us closer to forever.
+Not every memory comes from a big trip. Some of Ava and Tomas's favorite memories come from everyday moments, shared hobbies, and simply having fun together.
 </p>
 
 </div>
@@ -343,7 +280,7 @@ arcade.jpg
 
 <section>
 
-<h2 class="title">Gallery</h2>
+<h2 class="section-title">Gallery</h2>
 
 <div class="gallery">
 
@@ -356,40 +293,67 @@ arcade.jpg
 
 </section>
 
+<section>
+
+<h2 class="section-title">RSVP</h2>
+
+<div class="rsvp">
+
+<input type="text" placeholder="Name">
+
+<select>
+<option>Will you attend?</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+
+<input type="number" placeholder="Number of Guests">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button>Submit</button>
+
+</div>
+
+</section>
+
 <footer>
 
-<h2>Tomas & Ava ❤️</h2>
+<h3>Ava & Tomas</h3>
 
-<p>
-We can't wait to celebrate with you.
-</p>
+<p>March 17, 2027</p>
+
+<p>St. Petersburg, Florida</p>
 
 </footer>
 
 <script>
 
-const weddingDate =
-new Date("March 17, 2027 16:00:00").getTime();
+const weddingDate = new Date("March 17, 2027").getTime();
 
-setInterval(() => {
+function updateCountdown(){
 
 const now = new Date().getTime();
 
-const distance = weddingDate - now;
+const diff = weddingDate - now;
 
-document.getElementById("days").innerHTML =
-Math.floor(distance / (1000*60*60*24));
+const daysTotal = Math.floor(diff/(1000*60*60*24));
 
-document.getElementById("hours").innerHTML =
-Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+const months = Math.floor(daysTotal/30);
 
-document.getElementById("minutes").innerHTML =
-Math.floor((distance % (1000*60*60)) / (1000*60));
+const weeks = Math.floor((daysTotal%30)/7);
 
-document.getElementById("seconds").innerHTML =
-Math.floor((distance % (1000*60)) / 1000);
+const days = daysTotal%7;
 
-},1000);
+document.getElementById("months").innerHTML = months;
+document.getElementById("weeks").innerHTML = weeks;
+document.getElementById("days").innerHTML = days;
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,60000);
 
 </script>
 
