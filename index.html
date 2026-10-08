@@ -20,7 +20,7 @@ body{
 font-family:'Montserrat',sans-serif;
 background:#faf9f7;
 color:#222;
-line-height:1.7;
+line-height:1.8;
 }
 
 .hero{
@@ -31,23 +31,19 @@ url('IMG_1148.jpeg');
 background-size:cover;
 background-position:center;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 color:white;
 }
 
-.hero-content{
-padding:20px;
-}
-
-.hero h1{
-font-size:5rem;
+.hero-content h1{
 font-family:'Cormorant Garamond',serif;
+font-size:5rem;
 }
 
-.hero p{
-font-size:1.3rem;
+.hero-content p{
+font-size:1.2rem;
 }
 
 section{
@@ -55,8 +51,8 @@ padding:80px 10%;
 }
 
 .section-title{
-font-size:3rem;
 font-family:'Cormorant Garamond',serif;
+font-size:3rem;
 text-align:center;
 margin-bottom:40px;
 }
@@ -64,7 +60,7 @@ margin-bottom:40px;
 .countdown{
 display:flex;
 justify-content:center;
-gap:25px;
+gap:20px;
 flex-wrap:wrap;
 }
 
@@ -74,22 +70,22 @@ padding:25px;
 width:180px;
 text-align:center;
 border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.number{
+.count-number{
 font-size:3rem;
 font-weight:bold;
 }
 
-.story{
+.content-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
 align-items:center;
 }
 
-.story img{
+.content-grid img{
 width:100%;
 border-radius:12px;
 }
@@ -112,36 +108,39 @@ max-width:700px;
 margin:auto;
 }
 
-input,textarea,select{
+input,
+select,
+textarea{
 width:100%;
 padding:15px;
-margin-bottom:20px;
+margin-bottom:15px;
 border:1px solid #ccc;
-border-radius:10px;
+border-radius:8px;
+font-size:1rem;
 }
 
 button{
 background:#222;
 color:white;
-border:none;
 padding:15px 30px;
-border-radius:10px;
-cursor:pointer;
+border:none;
+border-radius:8px;
+font-size:1rem;
 }
 
 footer{
-padding:50px;
 text-align:center;
-background:#f2efe9;
+padding:50px;
+background:#f1eeea;
 }
 
 @media(max-width:800px){
 
-.hero h1{
-font-size:3.2rem;
+.hero-content h1{
+font-size:3.5rem;
 }
 
-.story{
+.content-grid{
 grid-template-columns:1fr;
 }
 
@@ -149,6 +148,7 @@ grid-template-columns:1fr;
 
 </style>
 </head>
+
 <body>
 
 <header class="hero">
@@ -168,17 +168,17 @@ grid-template-columns:1fr;
 <div class="countdown">
 
 <div class="count-box">
-<div id="months" class="number">0</div>
+<div id="months" class="count-number">0</div>
 Months
 </div>
 
 <div class="count-box">
-<div id="weeks" class="number">0</div>
+<div id="weeks" class="count-number">0</div>
 Weeks
 </div>
 
 <div class="count-box">
-<div id="days" class="number">0</div>
+<div id="days" class="count-number">0</div>
 Days
 </div>
 
@@ -190,7 +190,7 @@ Days
 
 <h2 class="section-title">Our Story</h2>
 
-<div class="story">
+<div class="content-grid">
 
 IMG_3031.jpeg
 
@@ -210,11 +210,15 @@ Ava and Tomas have built a relationship centered on friendship, trust, and suppo
 
 <h2 class="section-title">Wedding Details</h2>
 
-<p style="text-align:center; font-size:1.2rem;">
-March 17, 2027
-<br><br>
-St. Petersburg, Florida
-</p>
+<div style="text-align:center;">
+
+<p>March 17, 2027</p>
+
+<br>
+
+<p>St. Petersburg, Florida</p>
+
+</div>
 
 </section>
 
@@ -222,7 +226,7 @@ St. Petersburg, Florida
 
 <h2 class="section-title">Adventures</h2>
 
-<div class="story">
+<div class="content-grid">
 
 IMG_6261.jpeg
 
@@ -242,7 +246,7 @@ Some of Ava and Tomas's favorite memories come from exploring new places and spe
 
 <h2 class="section-title">Fun Memories</h2>
 
-<div class="story">
+<div class="content-grid">
 
 <div>
 
@@ -264,16 +268,10 @@ IMG_0160.jpeg
 
 <div class="gallery">
 
-<div class="gallery">
-
 IMG_1148.jpeg
 IMG_3031.jpeg
 IMG_6261.jpeg
 IMG_0160.jpeg
-
-</div>
-
-
 
 </div>
 
@@ -315,18 +313,18 @@ IMG_0160.jpeg
 
 <script>
 
-const weddingDate = new Date("March 17, 2027").getTime();
+const weddingDate = new Date("March 17, 2027");
 
 function updateCountdown(){
 
-const now = new Date().getTime();
-const diff = weddingDate - now;
+const today = new Date();
 
-const totalDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+const difference =
+Math.floor((weddingDate - today)/(1000*60*60*24));
 
-const months = Math.floor(totalDays / 30);
-const weeks = Math.floor((totalDays % 30) / 7);
-const days = totalDays % 7;
+const months = Math.floor(difference/30);
+const weeks = Math.floor((difference%30)/7);
+const days = difference%7;
 
 document.getElementById("months").innerHTML = months;
 document.getElementById("weeks").innerHTML = weeks;
