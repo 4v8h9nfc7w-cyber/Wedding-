@@ -6,7 +6,7 @@
 
 <title>Ava & Tomas</title>
 
-https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -26,7 +26,7 @@ line-height:1.8;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
 url('IMG_1148.jpeg');
 background-size:cover;
 background-position:center;
@@ -41,6 +41,7 @@ padding:20px;
 .hero-content h1{
 font-size:5rem;
 font-family:'Cormorant Garamond',serif;
+margin-bottom:10px;
 }
 
 .hero-content p{
@@ -89,6 +90,7 @@ align-items:center;
 .content-grid img{
 width:100%;
 border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
 .gallery{
@@ -102,6 +104,7 @@ width:100%;
 height:350px;
 object-fit:cover;
 border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
 
 .rsvp{
@@ -127,6 +130,11 @@ padding:15px 30px;
 border:none;
 border-radius:8px;
 font-size:1rem;
+cursor:pointer;
+}
+
+button:hover{
+background:#444;
 }
 
 footer{
@@ -191,7 +199,7 @@ Days
 
 <div class="content-grid">
 
-IMG_3031.jpeg
+<img src="IMG_3031.jpeg" alt="Our Story">
 
 <div>
 
@@ -209,7 +217,7 @@ Ava and Tomas have built a relationship centered on friendship, trust, and suppo
 
 <h2 class="section-title">Wedding Details</h2>
 
-<div style="text-align:center; font-size:1.2rem;">
+<div style="text-align:center;font-size:1.2rem;">
 
 <p>March 17, 2027</p>
 
@@ -227,12 +235,12 @@ Ava and Tomas have built a relationship centered on friendship, trust, and suppo
 
 <div class="content-grid">
 
-IMG_6261.jpeg
+<img src="IMG_6261.jpeg" alt="Family Photo">
 
 <div>
 
 <p>
-Family has always been an important part of Ava and Tomas's lives. The love, support, and encouragement they've received from family and friends have helped shape their journey together. They are grateful to celebrate this special day surrounded by the people who mean the most to them.
+Family has always been an important part of Ava and Tomas’s lives. The love, support, and encouragement they've received from family and friends have helped shape their journey together. They are grateful to celebrate this special day surrounded by the people who mean the most to them.
 </p>
 
 </div>
@@ -255,7 +263,7 @@ From special trips to simple everyday moments, Ava and Tomas have shared many me
 
 </div>
 
-IMG_0160.jpeg
+<img src="IMG_0160.jpeg" alt="Favorite Memories">
 
 </div>
 
@@ -267,10 +275,10 @@ IMG_0160.jpeg
 
 <div class="gallery">
 
-IMG_1148.jpeg
-IMG_3031.jpeg
-IMG_6261.jpeg
-IMG_0160.jpeg
+<img src="IMG_1148.jpeg" alt="Gallery Image 1">
+<img src="IMG_3031.jpeg" alt="Gallery Image 2">
+<img src="IMG_6261.jpeg" alt="Gallery Image 3">
+<img src="IMG_0160.jpeg" alt="Gallery Image 4">
 
 </div>
 
@@ -318,8 +326,9 @@ function updateCountdown(){
 
 const today = new Date();
 
-const difference =
-Math.floor((weddingDate - today)/(1000*60*60*24));
+const difference = Math.floor(
+(weddingDate - today)/(1000*60*60*24)
+);
 
 const months = Math.floor(difference/30);
 const weeks = Math.floor((difference%30)/7);
