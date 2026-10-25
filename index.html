@@ -62,95 +62,75 @@ margin-bottom:40px;
 .countdown{
 display:flex;
 justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+align-items:center;
+gap:30px;
+max-width:900px;
+margin:auto;
+flex-wrap:nowrap;
 }
 
 .count-box{
+flex:1;
 background:white;
 padding:25px;
-width:180px;
 text-align:center;
 border-radius:12px;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .count-number{
-font-size:3rem;
+font-size:3.5rem;
 font-weight:bold;
 }
 
-.content-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+.invitation-text{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:1.15rem;
 }
 
-.content-grid img{
-width:100%;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+.details{
+max-width:700px;
+margin:auto;
+text-align:center;
+font-size:1.1rem;
+line-height:2.3;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 }
 
 .gallery img{
 width:100%;
-height:350px;
+height:400px;
 object-fit:cover;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.rsvp{
-max-width:700px;
-margin:auto;
-}
-
-input,
-select,
-textarea{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:1rem;
-}
-
-button{
-background:#222;
-color:white;
-padding:15px 30px;
-border:none;
-border-radius:8px;
-font-size:1rem;
-cursor:pointer;
-}
-
-button:hover{
-background:#444;
 }
 
 footer{
 background:#f2efe9;
 text-align:center;
 padding:50px;
+margin-top:80px;
 }
 
-@media(max-width:800px){
+@media(max-width:768px){
 
 .hero-content h1{
 font-size:3.5rem;
 }
 
-.content-grid{
-grid-template-columns:1fr;
+.countdown{
+flex-wrap:wrap;
+}
+
+.count-box{
+min-width:150px;
 }
 
 }
@@ -161,11 +141,13 @@ grid-template-columns:1fr;
 <body>
 
 <header class="hero">
+
 <div class="hero-content">
 <h1>Ava & Tomas</h1>
 <p>March 17, 2027</p>
 <p>St. Petersburg, Florida</p>
 </div>
+
 </header>
 
 <section>
@@ -195,19 +177,25 @@ Days
 
 <section>
 
-<h2 class="section-title">Our Story</h2>
+<h2 class="section-title">Join Us</h2>
 
-<div class="content-grid">
-
-<img src="IMG_3031.jpeg" alt="Our Story">
-
-<div>
+<div class="invitation-text">
 
 <p>
-Ava and Tomas have built a relationship centered on friendship, trust, and support. Through new experiences, everyday moments, and plenty of memories along the way, they've continued to grow together. They're excited to celebrate this next chapter with their family and friends.
+Together with their families, Ava and Tomas joyfully invite you to celebrate their wedding day.
 </p>
 
-</div>
+<br>
+
+<p>
+As they begin this next chapter, they look forward to gathering with the people who have supported, encouraged, and loved them along the way.
+</p>
+
+<br>
+
+<p>
+Your presence would be a treasured part of this celebration, and they would be honored to share this unforgettable evening with you.
+</p>
 
 </div>
 
@@ -217,53 +205,32 @@ Ava and Tomas have built a relationship centered on friendship, trust, and suppo
 
 <h2 class="section-title">Wedding Details</h2>
 
-<div style="text-align:center;font-size:1.2rem;">
-
-<p>March 17, 2027</p>
-
-<br>
-
-<p>St. Petersburg, Florida</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Family</h2>
-
-<div class="content-grid">
-
-<img src="IMG_6261.jpeg" alt="Family Photo">
-
-<div>
+<div class="details">
 
 <p>
-Family has always been an important part of Ava and Tomas’s lives. The love, support, and encouragement they've received from family and friends have helped shape their journey together. They are grateful to celebrate this special day surrounded by the people who mean the most to them.
+<strong>Date</strong><br>
+March 17, 2027
 </p>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Favorite Memories</h2>
-
-<div class="content-grid">
-
-<div>
 
 <p>
-From special trips to simple everyday moments, Ava and Tomas have shared many memories together. Every experience, big or small, has become part of the story they're continuing to build.
+<strong>Time</strong><br>
+6:30 PM
 </p>
 
-</div>
+<p>
+<strong>Location</strong><br>
+St. Petersburg, Florida
+</p>
 
-<img src="IMG_0160.jpeg" alt="Favorite Memories">
+<p>
+<strong>Reception</strong><br>
+Dinner and refreshments will be provided.
+</p>
+
+<p>
+<strong>Guests</strong><br>
+Please refer to your invitation for guest information.
+</p>
 
 </div>
 
@@ -275,34 +242,11 @@ From special trips to simple everyday moments, Ava and Tomas have shared many me
 
 <div class="gallery">
 
-<img src="IMG_1148.jpeg" alt="Gallery Image 1">
-<img src="IMG_3031.jpeg" alt="Gallery Image 2">
-<img src="IMG_6261.jpeg" alt="Gallery Image 3">
-<img src="IMG_0160.jpeg" alt="Gallery Image 4">
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">RSVP</h2>
-
-<div class="rsvp">
-
-<input type="text" placeholder="Name">
-
-<select>
-<option>Will you attend?</option>
-<option>Yes</option>
-<option>No</option>
-</select>
-
-<input type="number" placeholder="Number of Guests">
-
-<textarea rows="5" placeholder="Message"></textarea>
-
-<button>Submit</button>
+<img src="IMG_1148.jpeg" alt="">
+<img src="IMG_3031.jpeg" alt="">
+<img src="IMG_6261.jpeg" alt="">
+<img src="IMG_0160.jpeg" alt="">
+<img src="IMG_0715.jpg" alt="">
 
 </div>
 
@@ -310,10 +254,11 @@ From special trips to simple everyday moments, Ava and Tomas have shared many me
 
 <footer>
 
-<h3>Ava & Tomas</h3>
+<h3 style="font-family:'Cormorant Garamond',serif;font-size:2rem;">
+Ava & Tomas
+</h3>
 
 <p>March 17, 2027</p>
-
 <p>St. Petersburg, Florida</p>
 
 </footer>
@@ -326,9 +271,8 @@ function updateCountdown(){
 
 const today = new Date();
 
-const difference = Math.floor(
-(weddingDate - today)/(1000*60*60*24)
-);
+const difference =
+Math.floor((weddingDate - today)/(1000*60*60*24));
 
 const months = Math.floor(difference/30);
 const weeks = Math.floor((difference%30)/7);
@@ -341,7 +285,6 @@ document.getElementById("days").innerHTML = days;
 }
 
 updateCountdown();
-
 setInterval(updateCountdown,60000);
 
 </script>
